@@ -50,7 +50,7 @@
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="RetriveData" sap:VirtualizedContainerService.HintSize="614,643" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="sd:DataTable" Name="dtDogSupply" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSupply" />
       <Variable x:TypeArguments="x:Int32" Name="index" />
       <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of String)]" Name="itemsNeededList" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[new Dictionary(Of String, String)]" Name="itemsNeededDict" />
@@ -75,7 +75,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,194.6 299.4,194.6 299.4,210</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange AddHeaders="False" DataTable="[dtDogSupply]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A2" SheetName="Dog Food" WorkbookPath="..\Humane Society Supply List.xlsx">
+      <ui:ReadRange AddHeaders="True" DataTable="[dtSupply]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1" SheetName=" Baby &amp; Childcare" WorkbookPath="..\Homeless Mission Supply List .xlsx">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -113,13 +113,13 @@
                   <av:PointCollection x:Key="ConnectorLocation">300,344.6 300,384.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEachRow CurrentIndex="[index]" DataTable="[dtDogSupply]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow CurrentIndex="[index]" DataTable="[dtSupply]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="452,951" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="585,1083" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="422,803" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="ui:GenericValue" Name="supplyQty" />
                       </Sequence.Variables>
@@ -128,55 +128,41 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ReadCell Cell="[&quot;A&quot; + index.ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="563,87" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName="Dog Food" WorkbookPath="..\Humane Society Supply List.xlsx">
+                      <ui:ReadCell Cell="[&quot;A&quot; + index.ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="400,87" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName=" Baby &amp; Childcare" WorkbookPath="..\Homeless Mission Supply List .xlsx">
                         <ui:ReadCell.Result>
                           <OutArgument x:TypeArguments="ui:GenericValue">[supplyQty]</OutArgument>
                         </ui:ReadCell.Result>
                       </ui:ReadCell>
-                      <If Condition="[index &gt;= 2 and supplyQty &lt; 5]" sap:VirtualizedContainerService.HintSize="563,864" sap2010:WorkflowViewState.IdRef="If_1">
-                        <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="438,716" sap2010:WorkflowViewState.IdRef="Sequence_1">
-                            <Sequence.Variables>
-                              <Variable x:TypeArguments="x:String" Name="brand" />
-                              <Variable x:TypeArguments="x:String" Name="link" />
-                            </Sequence.Variables>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:ReadCell Cell="[&quot;B&quot; + index.ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="416,87" sap2010:WorkflowViewState.IdRef="ReadCell_2" SheetName="Dog Food" WorkbookPath="..\Humane Society Supply List.xlsx">
-                              <ui:ReadCell.Result>
-                                <OutArgument x:TypeArguments="x:String">[brand]</OutArgument>
-                              </ui:ReadCell.Result>
-                            </ui:ReadCell>
-                            <ui:ReadCell Cell="[&quot;E&quot; + index.ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="416,87" sap2010:WorkflowViewState.IdRef="ReadCell_3" SheetName="Dog Food" WorkbookPath="..\Humane Society Supply List.xlsx">
-                              <ui:ReadCell.Result>
-                                <OutArgument x:TypeArguments="x:String">[link]</OutArgument>
-                              </ui:ReadCell.Result>
-                            </ui:ReadCell>
-                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,192" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                              <ui:CommentOut.Body>
-                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="238,114" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <AddToCollection x:TypeArguments="x:String" Collection="[itemsNeededList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[brand]" />
-                                </Sequence>
-                              </ui:CommentOut.Body>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:CommentOut>
-                            <maes:AddToDictionary x:TypeArguments="x:String, x:String" Dictionary="[itemsNeededDict]" DisplayName="Add to dictionary" sap:VirtualizedContainerService.HintSize="416,138" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_1" Key="[brand]" Value="[link]" />
-                          </Sequence>
-                        </If.Then>
-                      </If>
+                      <Assign sap:VirtualizedContainerService.HintSize="400,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[index]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[index + 2]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,484" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="brand" />
+                          <Variable x:TypeArguments="x:String" Name="link" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ReadCell Cell="[&quot;B&quot; + index.ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="378,87" sap2010:WorkflowViewState.IdRef="ReadCell_2" SheetName=" Baby &amp; Childcare" WorkbookPath="..\Homeless Mission Supply List .xlsx">
+                          <ui:ReadCell.Result>
+                            <OutArgument x:TypeArguments="x:String">[brand]</OutArgument>
+                          </ui:ReadCell.Result>
+                        </ui:ReadCell>
+                        <ui:ReadCell Cell="[&quot;E&quot; + index.ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="378,87" sap2010:WorkflowViewState.IdRef="ReadCell_3" SheetName=" Baby &amp; Childcare" WorkbookPath="..\Homeless Mission Supply List .xlsx">
+                          <ui:ReadCell.Result>
+                            <OutArgument x:TypeArguments="x:String">[link]</OutArgument>
+                          </ui:ReadCell.Result>
+                        </ui:ReadCell>
+                        <maes:AddToDictionary x:TypeArguments="x:String, x:String" Dictionary="[itemsNeededDict]" DisplayName="Add to dictionary" sap:VirtualizedContainerService.HintSize="378,138" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_1" Key="[brand]" Value="[link]" />
+                      </Sequence>
                     </Sequence>
                   </ActivityAction>
                 </ui:ForEachRow.Body>
