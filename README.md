@@ -22,7 +22,10 @@ If no items were stored, the process will end.
 ## Software Needed To Run Process
 * Microsoft Excel
 * Google Chrome
-* UiPath Community Edition
+* UiPath 2019.7.0-beta.74 - 7/15/2019 Community Edition
+* Microsoft Windows 10
+* .NET Framework Version 4.7.2 or later
+
 
 # Notes
 * Update the UserCreds.xlsx file with the username and password of the organization/person that will need to log in to post to Facebook.

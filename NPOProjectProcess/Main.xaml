@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="780,1366" sap2010:WorkflowViewState.IdRef="Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="780,1396" sap2010:WorkflowViewState.IdRef="Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="20">
       <x:String>System.Activities.XamlIntegration</x:String>
@@ -44,7 +44,7 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="7/20/2019                                               NPO Project - Automate For A Cause -  Helping Shelters&#xA;&#xA;We developed this process in hopes of helping provide basic necessities and comforts to those in desperate need by enabling shelters to easily engage the community via social media with lists of their most needed items. This process should in turn help make shelter employees/volunteers lives easier, as well as, improve the lives of those who are facing some of their darkest times.&#xA;&#xA;-Lacy Simpson, Virginia Hutchinson, Farrah Fouquet (The Bot Chix)&#xA;&#xA;Overview&#xA;This automated process will check to see if the shelter is in need of particular items. The organization updates and maintains a record of their items in-stock in the specified excel file. If the shelter is low on certain items, the process will navigate to the organization's Facebook page to post a message listing the needed items which, in turn, should help the shelter engage the community and make the shelter’s needs known. This software could be used for any type of shelter or organization. The test cases used for this process were for a fictitious homeless shelter and a fictitious animal shelter. The process uses Facebook for the social media platform to post, but it could easily be enhanced to post needed items to twitter, Instagram, and/or the organization's website.&#xA;&#xA;Process Steps&#xA;This process will open and read the provided excel file. The file will contain a list of in-stock-items for a shelter. (Column A) For each item listed in the excel file, the process will check to see if the quantity of available items is below a specified amount. If so, the name of the item (Column B) and a link to purchase the item (Column E) will be stored in a dictionary. If items were stored in the dictionary, the process will navigate to Facebook and post a message listing the items with corresponding links. If no items were stored, the process will end.&#xA;&#xA;Software Needed To Run Process&#xA;Microsoft Excel&#xA;Google Chrome&#xA;UiPath Community Edition&#xD;&#xA;&#xA;Notes&#xA;Update the UserCreds.xlsx file with the username and password of the organization/person that will need to log in to post to Facebook.&#xA;Update the imageFilePath Variable that is in the postToFacebook Workflow&#xA;Make sure the Supply list .xlsx file being used has the correct template. &#xA;The header of each sheet in the supply list excel file must be in the format:&#xA;In Stock (ColumnA) | Item (ColumnB) | Weight (ColumnC) | Avg. Price (ColumnD) | Link (ColumnE) &#xA;Please refer to the included Homeless Mission Supply List.xlsx OR Humane Society Supply List.xlsx for examples&#xA;&#xA;" DisplayName="Main" sap:VirtualizedContainerService.HintSize="740,1246" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="7/20/2019                                               NPO Project - Automate For A Cause -  Helping Shelters&#xA;&#xA;We developed this process in hopes of helping provide basic necessities and comforts to those in desperate need by enabling shelters to easily engage the community via social media with lists of their most needed items. This process should in turn help make shelter employees/volunteers lives easier, as well as, improve the lives of those who are facing some of their darkest times.&#xA;&#xA;-Lacy Simpson, Virginia Hutchinson, Farrah Fouquet (The Bot Chix)&#xA;&#xA;Overview&#xA;This automated process will check to see if the shelter is in need of particular items. The organization updates and maintains a record of their items in-stock in the specified excel file. If the shelter is low on certain items, the process will navigate to the organization's Facebook page to post a message listing the needed items which, in turn, should help the shelter engage the community and make the shelter’s needs known. This software could be used for any type of shelter or organization. The test cases used for this process were for a fictitious homeless shelter and a fictitious animal shelter. The process uses Facebook for the social media platform to post, but it could easily be enhanced to post needed items to twitter, Instagram, and/or the organization's website.&#xA;&#xA;Process Steps&#xA;This process will open and read the provided excel file. The file will contain a list of in-stock-items for a shelter. (Column A) For each item listed in the excel file, the process will check to see if the quantity of available items is below a specified amount. If so, the name of the item (Column B) and a link to purchase the item (Column E) will be stored in a dictionary. If items were stored in the dictionary, the process will navigate to Facebook and post a message listing the items with corresponding links. If no items were stored, the process will end.&#xA;&#xA;Software Needed To Run Process&#xA;Microsoft Excel&#xA;Google Chrome&#xA;UiPath 2019.7.0-beta.74 - 7/15/2019 Community Edition&#xA;Microsoft Windows 10&#xA;.NET Framework Version 4.7.2 or later&#xD;&#xA;&#xA;Notes&#xA;Update the UserCreds.xlsx file with the username and password of the organization/person that will need to log in to post to Facebook.&#xA;Update the imageFilePath Variable that is in the postToFacebook Workflow&#xA;Make sure the Supply list .xlsx file being used has the correct template. &#xA;The header of each sheet in the supply list excel file must be in the format:&#xA;In Stock (ColumnA) | Item (ColumnB) | Weight (ColumnC) | Avg. Price (ColumnD) | Link (ColumnE) &#xA;Please refer to the included Homeless Mission Supply List.xlsx OR Humane Society Supply List.xlsx for examples&#xA;&#xA;" DisplayName="Main" sap:VirtualizedContainerService.HintSize="740,1276" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[new Dictionary(Of String, String)]" Name="itemsNeededDict" />
       <Variable x:TypeArguments="x:String" Default="..\Humane Society Supply List.xlsx" Name="workbookPath" />
@@ -69,10 +69,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">480,397</av:Point>
-          <av:Size x:Key="ShapeSize">200,66</av:Size>
+          <av:Size x:Key="ShapeSize">216,66</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="End Process" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence DisplayName="End Process" sap:VirtualizedContainerService.HintSize="216,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -86,11 +86,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">270,194.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">370,245.5 370,286.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">216,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">378,245.5 378,275.5 370,275.5 370,286.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="TryCatch: Retrieve Data" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+      <TryCatch DisplayName="TryCatch: Retrieve Data" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="TryCatch_2">
         <TryCatch.Try>
           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RetriveData workflow" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="RetriveData.xaml">
             <ui:InvokeWorkflowFile.Arguments>
@@ -158,8 +158,8 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">310,286.5</av:Point>
               <av:Size x:Key="ShapeSize">120,87</av:Size>
-              <av:PointCollection x:Key="TrueConnector">310,330 140,330 140,404.5</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">430,330 580,330 580,397</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">310,330 148,330 148,404.5</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">430,330 588,330 588,397</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
@@ -167,11 +167,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">40,404.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">240,430 480,430</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">216,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">256,430 480,430</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="TryCatch: postToFacebook" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+              <TryCatch DisplayName="TryCatch: postToFacebook" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                 <TryCatch.Try>
                   <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke postToFacebook workflow" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="postToFacebook.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
@@ -226,7 +226,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">270,107</av:Point>
           <av:Size x:Key="ShapeSize">216,66</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">378,173 370,173 370,194.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">378,173 378,194.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Sequence DisplayName="Begin Process" sap:VirtualizedContainerService.HintSize="216,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
