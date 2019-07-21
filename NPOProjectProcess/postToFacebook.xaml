@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>686,716</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>686,756</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>postToFacebook_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -60,7 +60,7 @@
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="browserBool" />
       <Variable x:TypeArguments="ui:Browser" Name="chromeBrowser" />
-      <Variable x:TypeArguments="x:String" Default="C:\Users\bioni\Development\NPOProject2\NPOProject\donate.png" Name="imageFilePath" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\bioni\Development\NPOProject2\NPOProject\Images\donate.png" Name="imageFilePath" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -112,19 +112,19 @@
               <av:Size x:Key="ShapeSize">216,51</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser: Chrome" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="dbdcbd6d5029214f9f8d50f494a3a7fe" Selector="&lt;html app='chrome.exe' /&gt;" UiBrowser="[chromeBrowser]">
+          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser: Chrome" sap:VirtualizedContainerService.HintSize="506,2351" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="dbdcbd6d5029214f9f8d50f494a3a7fe" Selector="&lt;html app='chrome.exe' /&gt;" UiBrowser="[chromeBrowser]">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence sap:VirtualizedContainerService.HintSize="476,2206" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence sap:VirtualizedContainerService.HintSize="476,2205" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="438,1990" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="438,1989" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Int32" Name="itemIndex" />
                       <Variable x:TypeArguments="x:Boolean" Name="leaveSiteBool" />
@@ -245,7 +245,7 @@
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bd39325964a30825668510ca75635452" Selector="&lt;webctrl parentid='js_*' tag='DIV' idx='28' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, scg:List(x:Object))" CurrentIndex="[itemIndex]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="400,360" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[list_in]">
+                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, scg:List(x:Object))" CurrentIndex="[itemIndex]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="400,359" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[list_in]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, scg:List(x:Object))">
                           <ActivityAction.Argument>
