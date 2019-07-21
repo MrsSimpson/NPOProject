@@ -111,44 +111,45 @@
               <av:Size x:Key="ShapeSize">200,51</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser: Chrome" sap:VirtualizedContainerService.HintSize="522,2351" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="dbdcbd6d5029214f9f8d50f494a3a7fe" Selector="&lt;html app='chrome.exe' /&gt;" UiBrowser="[chromeBrowser]">
+          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser: Chrome" sap:VirtualizedContainerService.HintSize="414,2351" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="dbdcbd6d5029214f9f8d50f494a3a7fe" Selector="&lt;html app='chrome.exe' /&gt;" UiBrowser="[chromeBrowser]">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence sap:VirtualizedContainerService.HintSize="508,2205" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence sap:VirtualizedContainerService.HintSize="396,2205" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1989" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="374,1989" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Int32" Name="itemIndex" />
                       <Variable x:TypeArguments="x:Boolean" Name="leaveSiteBool" />
                       <Variable x:TypeArguments="x:Boolean" Name="logInBool" />
+                      <Variable x:TypeArguments="x:String" Default="C:\Users\bioni\Development\NPOProject\Supplies-Needed.jpg" Name="imageFilePath" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MaximizeWindow Window="{x:Null}" ContinueOnError="True" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="464,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-                    <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To: Facebook" sap:VirtualizedContainerService.HintSize="464,59" sap2010:WorkflowViewState.IdRef="NavigateTo_4" Url="www.facebook.com">
+                    <ui:MaximizeWindow Window="{x:Null}" ContinueOnError="True" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="352,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                    <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To: Facebook" sap:VirtualizedContainerService.HintSize="352,59" sap2010:WorkflowViewState.IdRef="NavigateTo_4" Url="www.facebook.com">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:NavigateTo>
-                    <Delay DisplayName="Delay 3 Seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="464,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
-                    <ui:UiElementExists DisplayName="Element Exists: Log In" Exists="[logInBool]" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                    <Delay DisplayName="Delay 3 Seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="352,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                    <ui:UiElementExists DisplayName="Element Exists: Log In" Exists="[logInBool]" sap:VirtualizedContainerService.HintSize="352,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                       <ui:UiElementExists.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1612178105da7566a4c461d9587c2135" Selector="&lt;webctrl innertext='FacebookEmail or PhonePasswordForgot account?' parentclass='loggedout_menubar_container' tag='DIV' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
                       </ui:UiElementExists.Target>
                     </ui:UiElementExists>
-                    <If Condition="[logInBool = True]" DisplayName="If Not Logged In" sap:VirtualizedContainerService.HintSize="464,51" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[logInBool = True]" DisplayName="If Not Logged In" sap:VirtualizedContainerService.HintSize="352,51" sap2010:WorkflowViewState.IdRef="If_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -204,7 +205,7 @@
                         </Sequence>
                       </If.Then>
                     </If>
-                    <ui:Click DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click: Facebook Home" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                    <ui:Click DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click: Facebook Home" sap:VirtualizedContainerService.HintSize="352,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -219,7 +220,7 @@
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d436d390ede4aad0d5cc70aecd33c956" Selector="&lt;webctrl parentid='js_*' tag='SPAN' idx='1' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:Click DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click: Status Update" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                    <ui:Click DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click: Status Update" sap:VirtualizedContainerService.HintSize="352,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -234,17 +235,17 @@
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="613d23afc4aac16632a3aad533c3db75" Selector="&lt;webctrl innertext='What*' id='js_*' tag='DIV' idx='2' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:SetFocus DelayBefore="{x:Null}" DelayMS="500" DisplayName="Set Focus: Status Pop Out Box" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="SetFocus_1">
+                    <ui:SetFocus DelayBefore="{x:Null}" DelayMS="500" DisplayName="Set Focus: Status Pop Out Box" sap:VirtualizedContainerService.HintSize="352,106" sap2010:WorkflowViewState.IdRef="SetFocus_1">
                       <ui:SetFocus.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="dde248ad33a2a12dc8667a754e434d40" Selector="&lt;webctrl innertext='What*s on your mind, Bot?' parentid='js_*' tag='DIV' idx='6' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:SetFocus.Target>
                     </ui:SetFocus>
-                    <ui:TypeInto DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="500" DisplayName="Type Into: Status Pop Out Box" EmptyField="True" sap:VirtualizedContainerService.HintSize="464,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="False" Text="This is a Test: [k(enter)] The Following Items Are Needed: [k(enter)]">
+                    <ui:TypeInto DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="500" DisplayName="Type Into: Status Pop Out Box" EmptyField="True" sap:VirtualizedContainerService.HintSize="352,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="False" Text="This is a Test: [k(enter)]The Following Items Are Needed: [k(enter)]">
                       <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bd39325964a30825668510ca75635452" Selector="&lt;webctrl innertext='What*s on your mind, Bot?' parentid='js_*' tag='DIV' idx='6' /&gt;" WaitForReady="INTERACTIVE" />
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bd39325964a30825668510ca75635452" Selector="&lt;webctrl parentid='js_*' tag='DIV' idx='28' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="[itemIndex]" DisplayName="For Each: item in the list" sap:VirtualizedContainerService.HintSize="464,359" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[list_in]">
+                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="[itemIndex]" DisplayName="For Each: item in the list" sap:VirtualizedContainerService.HintSize="352,359" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[list_in]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
                           <ActivityAction.Argument>
@@ -258,14 +259,14 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <ui:TypeInto DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="500" DisplayName="Type Into: Status Pop Out Box" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="False" Text="[item.Key +  &quot;[k(enter)]&quot; + item.Value + &quot;[k(enter)] [k(enter)]&quot;]">
                               <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bd39325964a30825668510ca75635452" Selector="&lt;webctrl innertext='The Following Items Are Needed:*' parentid='js_*' tag='DIV' idx='9' /&gt;" WaitForReady="INTERACTIVE" />
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bd39325964a30825668510ca75635452" Selector="&lt;webctrl innertext='*The Following Items Are Needed:*' parentid='js_*' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                               </ui:TypeInto.Target>
                             </ui:TypeInto>
                           </Sequence>
                         </ActivityAction>
                       </ui:ForEach.Body>
                     </ui:ForEach>
-                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click: Add Photo" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click: Add Photo" sap:VirtualizedContainerService.HintSize="352,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -280,12 +281,12 @@
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="57e7139a9f098548ee63fc7003a0eca7" Selector="&lt;webctrl parentid='js_*' tag='TABLE' /&gt;&lt;webctrl innertext='Photo/Video' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type: Photo File Path" EmptyField="False" sap:VirtualizedContainerService.HintSize="464,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="False" Text="C:\Users\bioni\Development\NPOProject\Supplies-Needed.jpg [k(enter)]">
+                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type: Photo File Path" EmptyField="False" sap:VirtualizedContainerService.HintSize="352,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="False" Text="[imageFilePath + &quot;[k(enter)]&quot;]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4144a123e92a336671ab19822f9088cb" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;&lt;wnd ctrlid='1148' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click: Post" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click: Post" sap:VirtualizedContainerService.HintSize="352,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -301,8 +302,8 @@
                       </ui:Click.Target>
                     </ui:Click>
                   </Sequence>
-                  <Delay DisplayName="Delay 5 Seconds" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="486,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                  <ui:CloseTab Browser="[chromeBrowser]" ContinueOnError="True" DisplayName="Close Tab: Facebook" sap:VirtualizedContainerService.HintSize="486,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+                  <Delay DisplayName="Delay 5 Seconds" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="374,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <ui:CloseTab Browser="[chromeBrowser]" ContinueOnError="True" DisplayName="Close Tab: Facebook" sap:VirtualizedContainerService.HintSize="374,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
                 </Sequence>
               </ActivityAction>
             </ui:BrowserScope.Body>
