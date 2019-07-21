@@ -60,7 +60,7 @@
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="browserBool" />
       <Variable x:TypeArguments="ui:Browser" Name="chromeBrowser" />
-      <Variable x:TypeArguments="x:String" Default="C:\Users\bioni\Development\NPOProject\Supplies-Needed.jpg" Name="imageFilePath" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\bioni\Development\NPOProject2\NPOProject\donate.png" Name="imageFilePath" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
