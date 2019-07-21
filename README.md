@@ -14,7 +14,7 @@ The process uses Facebook for the social media platform to post, but it could ea
 ## Process Steps
 This process will open and read the provided excel file. 
 The file will contain a list of in-stock-items for a shelter. (Column A)
-For each item listed in the excel file, the process will check to see if the quantity of available items is below a specified amount.
+For each item listed in the excel file, the process will check to see if the quantity of available items is below a specified amount Minimum (ColumnF).
 If so, the name of the item (Column B) and a link to purchase the item (Column E) will be stored in a dictionary.
 If items were stored in the dictionary, the process will navigate to Facebook and post a message listing the items with corresponding links. 
 If no items were stored, the process will end.
@@ -31,7 +31,7 @@ If no items were stored, the process will end.
 * Update the UserCreds.xlsx file with the username and password of the organization/person that will need to log in to post to Facebook.
 * Update the imageFilePath Variable that is in the postToFacebook Workflow 
 * Make sure the Supply list .xlsx file being used has the correct template. <br> 
-**The header of each sheet in the supply list excel file must be in the format:<br> In Stock (ColumnA) | Item (ColumnB) | Weight (ColumnC) | Avg. Price (ColumnD) | Link (ColumnE)** <br>
+**The header of each sheet in the supply list excel file must be in the format:<br> In Stock (ColumnA) | Item (ColumnB) | Weight (ColumnC) | Avg. Price (ColumnD) | Link (ColumnE) | Minimum (ColumnF)** <br>
 Please refer to the included **Homeless Mission Supply List.xlsx** OR **Humane Society Supply List.xlsx** for examples
 
 ### Open Source License
