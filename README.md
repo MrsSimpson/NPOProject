@@ -1,9 +1,9 @@
 # NPOProject - Automate For A Cause - Helping Shelters 
-*I developed this process in hopes of helping provide basic necessities and comforts to those in desperate need by enabling shelters to 
+*We developed this process in hopes of helping provide basic necessities and comforts to those in desperate need by enabling shelters to 
 easily engage the community via social media with lists of their most needed items. This process should in turn help make shelter 
 employees/volunteers lives easier, as well as, improve the lives of those who are facing some of their darkest times.*
 
--*Lacy Simpson 7/20/2019*
+-*Lacy Simpson, Virginia Hutchinson, Farrah Fouquet (The Bot Chix) 7/20/2019*
 
 # Overview
 This automated process will check to see if the shelter is in need of particular items. 
@@ -32,7 +32,7 @@ If no items were stored, the process will end.
 Please refer to the included **Homeless Mission Supply List.xlsx** OR **Humane Society Supply List.xlsx** for examples
 
 ### Open Source License
-Copyright 2019 Lacy Simpson
+Copyright 2019 Lacy Simpson, Virginia Hutchinson, Farrah Fouquet
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
