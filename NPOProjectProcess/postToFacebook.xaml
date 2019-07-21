@@ -60,6 +60,7 @@
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="browserBool" />
       <Variable x:TypeArguments="ui:Browser" Name="chromeBrowser" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\bioni\Development\NPOProject\Supplies-Needed.jpg" Name="imageFilePath" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -128,7 +129,6 @@
                       <Variable x:TypeArguments="x:Int32" Name="itemIndex" />
                       <Variable x:TypeArguments="x:Boolean" Name="leaveSiteBool" />
                       <Variable x:TypeArguments="x:Boolean" Name="logInBool" />
-                      <Variable x:TypeArguments="x:String" Default="C:\Users\bioni\Development\NPOProject\Supplies-Needed.jpg" Name="imageFilePath" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
