@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1014,3074</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1014,3127</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>RetriveData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -59,7 +59,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RetrieveData" sap:VirtualizedContainerService.HintSize="974,2954" sap2010:WorkflowViewState.IdRef="Sequence_8">
+  <Sequence DisplayName="RetrieveData" sap:VirtualizedContainerService.HintSize="974,3007" sap2010:WorkflowViewState.IdRef="Sequence_8">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[Nothing]" Name="dtSupply" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="index" />
@@ -72,7 +72,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="936,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <Assign DisplayName="Initialize Dictionary" sap:VirtualizedContainerService.HintSize="936,60" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:Object))">[itemsNeededDict_out]</OutArgument>
       </Assign.To>
@@ -80,19 +80,19 @@
         <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:Object))">[new Dictionary(Of String, List(Of Object))]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:PathExists DisplayName="Path Exists" Exists="[workBookExists]" sap:VirtualizedContainerService.HintSize="936,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[workBookPath_in]" PathType="File" />
-    <If Condition="[workBookExists = False]" sap:VirtualizedContainerService.HintSize="936,208" sap2010:WorkflowViewState.IdRef="If_3">
+    <ui:PathExists DisplayName="Path Exists: workbook passed in" Exists="[workBookExists]" sap:VirtualizedContainerService.HintSize="936,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[workBookPath_in]" PathType="File" />
+    <If Condition="[workBookExists = False]" DisplayName="If workbook path does not exist" sap:VirtualizedContainerService.HintSize="936,208" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Throw Exception="[new BusinessRuleException]" sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+        <Throw DisplayName="Throw BRE" Exception="[new BusinessRuleException]" sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
       </If.Then>
     </If>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel: Read Sheets &amp; Get Supplies Needed" sap:VirtualizedContainerService.HintSize="936,2286" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" Workbook="[workBook]" WorkbookPath="[workbookPath_in]">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel: Read Sheets &amp; Get Supplies Needed" sap:VirtualizedContainerService.HintSize="936,2339" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" Workbook="[workBook]" WorkbookPath="[workbookPath_in]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="906,2177" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence sap:VirtualizedContainerService.HintSize="906,2230" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:GenericValue" Name="supplyQty" />
               <Variable x:TypeArguments="ui:GenericValue" Name="supplyMin" />
@@ -105,46 +105,46 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:MaximizeWindow Window="{x:Null}" ContinueOnError="True" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="868,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="868,2023" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[workBook.GetSheets]">
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each Sheet in the Workbook" sap:VirtualizedContainerService.HintSize="868,2076" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[workBook.GetSheets]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="sheet" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="836,1890" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="836,1943" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="798,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[sheet.ToString]" />
-                    <ui:ExcelReadRange AddHeaders="True" DataTable="[dtSupply]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="798,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="[sheet.ToString]">
+                    <ui:ExcelReadRange AddHeaders="True" DataTable="[dtSupply]" DisplayName="Read Range Of the Current Sheet" sap:VirtualizedContainerService.HintSize="798,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="[sheet.ToString]">
                       <ui:ExcelReadRange.Range>
                         <InArgument x:TypeArguments="x:String">
                           <Literal x:TypeArguments="x:String" Value="" />
                         </InArgument>
                       </ui:ExcelReadRange.Range>
                     </ui:ExcelReadRange>
-                    <If sap2010:Annotation.AnnotationText="Ensures that the sheet has data in it, in addition to the header" Condition="[dtSupply.Rows.Count &gt; 1]" sap:VirtualizedContainerService.HintSize="798,1598" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If sap2010:Annotation.AnnotationText="Ensures that the sheet has data in it, in addition to the header" Condition="[dtSupply.Rows.Count &gt; 1]" DisplayName="If The Sheet has Data" sap:VirtualizedContainerService.HintSize="798,1651" sap2010:WorkflowViewState.IdRef="If_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <ui:ForEachRow CurrentIndex="[index]" DataTable="[dtSupply]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="657,1424" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                        <ui:ForEachRow CurrentIndex="[index]" DataTable="[dtSupply]" DisplayName="For Each Row in the sheet" sap:VirtualizedContainerService.HintSize="657,1477" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                           <ui:ForEachRow.Body>
                             <ActivityAction x:TypeArguments="sd:DataRow">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="611,1277" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="611,1330" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="573,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                <Assign DisplayName="Assign: offset Index" sap:VirtualizedContainerService.HintSize="573,60" sap2010:WorkflowViewState.IdRef="Assign_5">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Int32">[index]</OutArgument>
                                   </Assign.To>
@@ -152,13 +152,18 @@
                                     <InArgument x:TypeArguments="x:Int32">[index + 2]</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <Assign sap:VirtualizedContainerService.HintSize="573,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                <Assign sap2010:Annotation.AnnotationText="Reinitializing the list for each row because only want current rows data to be stored. Do not want it to accumulate all rows data." DisplayName="Initialize qtyNeededList" sap:VirtualizedContainerService.HintSize="573,132" sap2010:WorkflowViewState.IdRef="Assign_7">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="scg:List(x:Object)">[qtyNeededList]</OutArgument>
                                   </Assign.To>
                                   <Assign.Value>
                                     <InArgument x:TypeArguments="scg:List(x:Object)">[new List(Of Object)]</InArgument>
                                   </Assign.Value>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
                                 </Assign>
                                 <ui:ExcelReadCell Cell="[&quot;A&quot; + index.ToString]" DisplayName="Read: Quantity" sap:VirtualizedContainerService.HintSize="573,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="[sheet.ToString]">
                                   <ui:ExcelReadCell.Result>
@@ -170,15 +175,20 @@
                                     <OutArgument x:TypeArguments="ui:GenericValue">[supplyMin]</OutArgument>
                                   </ui:ExcelReadCell.Result>
                                 </ui:ExcelReadCell>
-                                <If Condition="[(supplyQty &lt;&gt; Nothing and supplyMin &lt;&gt; Nothing) and (supplyQty &lt; supplyMin)]" DisplayName="If a Supply Quantity exists that is lower than the Supply Minimum for that item:" sap:VirtualizedContainerService.HintSize="573,787" sap2010:WorkflowViewState.IdRef="If_1">
+                                <If sap2010:Annotation.AnnotationText="If supplyQty is lower than the Supply Minimum (Specified by the shelter)  for that item, grab the item's brand (Column A) and Grab the Item's Link (Column E) and store them in the qtyNeededList. Add the brand name to the dictionary as the key because it is unique and then store the qtyNeededList as the value." Condition="[(supplyQty &lt;&gt; Nothing and supplyMin &lt;&gt; Nothing) and (supplyQty &lt; supplyMin)]" DisplayName="If a Supply Quantity and Supply Minimum exists and the supply Qty is low:" sap:VirtualizedContainerService.HintSize="573,768" sap2010:WorkflowViewState.IdRef="If_1">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
                                   <If.Then>
-                                    <Sequence DisplayName="Add Item Name and Link to a Dictionary" sap:VirtualizedContainerService.HintSize="432,640" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                                    <Sequence DisplayName="Add Item Name and Link to a Dictionary" sap:VirtualizedContainerService.HintSize="432,549" sap2010:WorkflowViewState.IdRef="Sequence_2">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:ExcelReadCell Cell="[&quot;B&quot; + index.ToString]" DisplayName="Read: item Name" sap:VirtualizedContainerService.HintSize="394,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_2" SheetName="[sheet.ToString]">
+                                      <ui:ExcelReadCell Cell="[&quot;B&quot; + index.ToString]" DisplayName="Read: item Brand Name" sap:VirtualizedContainerService.HintSize="394,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_2" SheetName="[sheet.ToString]">
                                         <ui:ExcelReadCell.Result>
                                           <OutArgument x:TypeArguments="x:String">[brand]</OutArgument>
                                         </ui:ExcelReadCell.Result>
@@ -188,27 +198,9 @@
                                           <OutArgument x:TypeArguments="x:String">[link]</OutArgument>
                                         </ui:ExcelReadCell.Result>
                                       </ui:ExcelReadCell>
-                                      <AddToCollection x:TypeArguments="x:Object" Collection="[qtyNeededList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="394,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_3" Item="[(supplyMin - supplyQty).ToString]" />
-                                      <AddToCollection x:TypeArguments="x:Object" Collection="[qtyNeededList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="394,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_4" Item="[link]" />
-                                      <maes:AddToDictionary x:TypeArguments="x:String, scg:List(x:Object)" Dictionary="[itemsNeededDict_out]" DisplayName="Add to dictionary" sap:VirtualizedContainerService.HintSize="394,135" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_3" Key="[brand]" Value="[qtyNeededList]" />
-                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="394,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                                        <ui:CommentOut.Body>
-                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="432,227" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                            <maes:AddToDictionary x:TypeArguments="x:String, x:String" Dictionary="[itemsNeededDict_out]" DisplayName="Add to itemsNeeded dictionary" sap:VirtualizedContainerService.HintSize="394,135" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_1" Key="[brand]" Value="[qtyNeededList]" />
-                                          </Sequence>
-                                        </ui:CommentOut.Body>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </ui:CommentOut>
+                                      <AddToCollection x:TypeArguments="x:Object" Collection="[qtyNeededList]" DisplayName="Add To Collection: qtyNeededList" sap:VirtualizedContainerService.HintSize="394,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_3" Item="[(supplyMin - supplyQty).ToString]" />
+                                      <AddToCollection x:TypeArguments="x:Object" Collection="[qtyNeededList]" DisplayName="Add To Collection: qtyNeededList" sap:VirtualizedContainerService.HintSize="394,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_4" Item="[link]" />
+                                      <maes:AddToDictionary x:TypeArguments="x:String, scg:List(x:Object)" Dictionary="[itemsNeededDict_out]" DisplayName="Add to dictionary: itemsNeededDict_out" sap:VirtualizedContainerService.HintSize="394,135" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_3" Key="[brand]" Value="[qtyNeededList]" />
                                     </Sequence>
                                   </If.Then>
                                 </If>
