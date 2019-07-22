@@ -35,7 +35,7 @@ The postToFacebook workflow will check to see if the user is logged in, if so th
 **The header of each sheet in the supply list excel file must be in the format:<br> In Stock (ColumnA) | Item (ColumnB) | Weight (ColumnC) | Avg. Price (ColumnD) | Link (ColumnE) | Minimum (ColumnF)** <br>
 Please refer to the included **Homeless Mission Supply List.xlsx** OR **Humane Society Supply List.xlsx** for examples. 
 <br>
-* After adding the username and password to the userCreds.xlsx template, open the project in UiPath and update the file path to the image's location on the local machine. In the variable section of Main Workflow, ensure that the file names are set to the desired excel file that you would like the bot to read. Run the process from main. 
+After adding the username and password to the userCreds.xlsx template, open the project in UiPath and update the file path to the image's location on the local machine. In the variable section of Main Workflow, ensure that the file names are set to the desired excel file that you would like the bot to read. Run the process from main. 
 
 ### Open Source License
 Copyright 2019 Lacy Simpson, Virginia Hutchinson, Farrah Fouquet
