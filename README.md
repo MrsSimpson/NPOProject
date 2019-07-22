@@ -27,7 +27,7 @@ The postToFacebook workflow will check to see if the user is logged in, if so th
 * .NET Framework Version 4.7.2 or later
 
 
-# Notes
+# How to run the automation
 * Clone the project from https://github.com/MrsSimpson/NPOProject
 * Update the UserCreds.xlsx file with the username and password of the organization/person that will need to log in to post to Facebook. Update the username in the A2 cell and update the password in the B2 cell of the provided template.
 * Update the imageFilePath variable that is in the postToFacebook Workflow. This file path must be the full path on your machine where the image will be located.
